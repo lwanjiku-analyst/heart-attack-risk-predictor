@@ -267,6 +267,6 @@ st.markdown("---")
 st.info(
     "**Medical Disclaimer:** This tool is for educational and risk-stratification support only, "
     "not for diagnosis or treatment. Predictions are based on population-level associations from "
-    "BRFSS-derived modeling and related medRxiv publication findings. Always consult a licensed "
+    "BRFSS-derived modeling and related graduate research findings. Always consult a licensed "
     "clinician for medical decisions."
 )
