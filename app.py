@@ -468,14 +468,14 @@ with col2:
 st.markdown("---")
 st.info("""
 **Medical Disclaimer:** This tool is for educational and risk-stratification support only, not for diagnosis or treatment.
-Predictions are based on population-level associations from BRFSS-derived modeling and graduate research at the University of Central Oklahoma (Wanjiku et al., 2026).
+Predictions are based on population-level associations from BRFSS-derived modeling and graduate research at the University of Central Oklahoma
 Equity flags are based on fairness audit findings — the first such audit in BRFSS cardiovascular ML literature.
 Always consult a licensed clinician for medical decisions.
 """)
 
 st.markdown("""
 <div style="text-align:center;color:#999;font-size:0.82rem;margin-top:0.5rem;">
-Built by Lilian Wanjiku · University of Central Oklahoma MSBA 2026 ·
+ Lilian Wanjiku · University of Central Oklahoma MSBA 2026 ·
 CDC BRFSS 2022 · 444,975 U.S. Adults · AUC 0.84 · Lift@D1 4.43×
 </div>
 """, unsafe_allow_html=True)
