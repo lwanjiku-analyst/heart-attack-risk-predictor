@@ -234,7 +234,7 @@ def equity_check(race, risk, decile):
 # ─────────────────────────────────────────────
 # Sidebar
 # ─────────────────────────────────────────────
-    with st.sidebar:
+with st.sidebar:
     st.markdown("### Model Snapshot")
     st.markdown("**Algorithm:** Logistic Regression")
     st.markdown("**Data Source:** CDC BRFSS 2022")
@@ -244,7 +244,6 @@ def equity_check(race, risk, decile):
     st.markdown("→ Catches 82 out of 100 high-risk patients")
     st.markdown("**Effectiveness: 4.4×**")
     st.markdown("→ Far better than random screening")
-    st.markdown("---")
     st.markdown("---")
     st.markdown("### Business Impact")
     st.markdown("**$56.9M annual savings** per 2M-member insurer from improved prevention targeting and high-risk outreach prioritization.")
