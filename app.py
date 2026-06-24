@@ -252,8 +252,11 @@ with st.sidebar:
     st.markdown("**How Effective Is It?**")
     st.markdown("<span style='font-size:0.8rem;'>✅</span> Highest-risk individuals experience heart attack rates **4.4× higher** than the national average", unsafe_allow_html=True)
     st.markdown("---")
-    st.markdown("### Business Impact")
-    st.markdown("**$56.9M annual savings** per 2M-member insurer from improved prevention targeting and high-risk outreach prioritization.")
+    st.markdown("### Potential Public Health & Healthcare Impact")
+    st.markdown("<span style='font-size:0.8rem;'>✅</span> Identifies high-risk individuals before a heart attack occurs", unsafe_allow_html=True)
+    st.markdown("<span style='font-size:0.8rem;'>✅</span> Supports targeted preventive healthcare interventions", unsafe_allow_html=True)
+    st.markdown("<span style='font-size:0.8rem;'>✅</span> Helps healthcare organizations prioritize limited resources", unsafe_allow_html=True)
+    st.markdown("<span style='font-size:0.8rem;'>✅</span> May reduce avoidable cardiovascular events and healthcare costs", unsafe_allow_html=True)
     st.markdown("---")
     st.markdown("### Behavioral & Public Health Frameworks")
     framework_labels = {
