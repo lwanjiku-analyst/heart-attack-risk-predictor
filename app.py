@@ -219,11 +219,11 @@ def decile_interpretation(decile, event_rate, risk):
 
 def get_recommendation(decile):
     if decile <= 3:
-        return "red", "🔴 HIGH PRIORITY — Schedule a cardiovascular screening immediately. Share these results with your doctor."
+        return "red", "#C0392B", "Higher Risk Profile", "Your cardiovascular risk is substantially higher than the national average. Consider discussing these results with a healthcare professional and exploring preventive screening and lifestyle interventions."
     elif decile <= 5:
-        return "yellow", "🟡 MODERATE — Annual cardiovascular checkup recommended. Review lifestyle factors with your doctor."
+        return "yellow", "#E67E22", "Moderate Risk Profile", "Your cardiovascular risk is above the national average. An annual cardiovascular checkup and a review of lifestyle factors with your doctor is recommended."
     else:
-        return "green", "🟢 LOWER RISK — Maintain healthy behaviors. Continue annual preventive care visits."
+        return "green", "#1A6B2A", "Lower Risk Profile", "Your cardiovascular risk is at or below the national average. Continue maintaining healthy behaviors and routine preventive care visits."
 
 def equity_check(race, risk, decile):
     if race in ["Hispanic", "Black / African American (Non-Hispanic)", "Other Race (Non-Hispanic)"]:
@@ -459,12 +459,16 @@ with col2:
         st.write("• No strong protective factors selected.")
 
     # ── RECOMMENDATION ──
-    rec_color, rec_text = get_recommendation(decile)
-    rec_class = f"action-card action-card-{rec_color}"
+    rec_color, rec_hex, rec_title, rec_text = get_recommendation(decile)
     st.markdown(f"""
     <div class="metric-card" style="margin-top:0.8rem;">
-        <h3 style="margin:0 0 0.5rem;color:#1c2f52;">Clinical Recommendation</h3>
-        <div class="{rec_class}" style="margin:0;">{rec_text}</div>
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:0.6rem;">
+            <span style="color:{rec_hex};font-size:1.3rem;">●</span>
+            <span style="font-weight:700;font-size:1.05rem;color:#1c2f52;">{rec_title}</span>
+        </div>
+        <div style="border-left:3px solid #d8dde6;padding-left:0.8rem;color:#333;font-size:0.93rem;line-height:1.5;">
+            {rec_text}
+        </div>
     </div>
     """, unsafe_allow_html=True)
 
