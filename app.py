@@ -241,13 +241,16 @@ with st.sidebar:
     st.markdown("CDC BRFSS 2022 (444,975 U.S. adults)")
 
     st.markdown("**How Accurate Is It?**")
-    st.markdown("✅ Correctly identifies heart attack risk in approximately **84% of cases**")
+    st.markdown("<span style='font-size:0.8rem;'>✅</span> Correctly identifies heart attack risk patterns in approximately **84% of cases**", unsafe_allow_html=True)
 
     st.markdown("**How Well Does It Find High-Risk Individuals?**")
-    st.markdown("✅ Detects approximately **82 out of every 100 people** who are truly high-risk")
+    st.markdown("<span style='font-size:0.8rem;'>✅</span> Identifies approximately **82 out of every 100 high-risk individuals**", unsafe_allow_html=True)
 
     st.markdown("**How Effective Is It?**")
-    st.markdown("✅ The highest-risk group identified by the model experiences heart attacks at **4.4 times the national average rate**")
+    st.markdown("<span style='font-size:0.8rem;'>✅</span> Highest-risk individuals experience heart attack rates **4.4× higher** than the national average", unsafe_allow_html=True)
+
+    st.markdown("**Purpose**")
+    st.markdown("Identify individuals who may benefit from earlier preventive healthcare interventions before a heart attack occurs.")
     st.markdown("---")
     st.markdown("### Business Impact")
     st.markdown("**$56.9M annual savings** per 2M-member insurer from improved prevention targeting and high-risk outreach prioritization.")
