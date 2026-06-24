@@ -484,7 +484,7 @@ with col2:
         """, unsafe_allow_html=True)
         if decile <= 3:
             st.markdown("💡 **Estimated Prevention Impact**")
-            st.markdown(f"Research simulations suggest that identifying 1,000 individuals with similar risk profiles and preventing only 10% of expected cardiovascular events could reduce hospitalization costs by approximately **${int(1000 * (event_rate/100) * 0.10 * 21560):,}**.")
+            st.markdown(f"Based on assumptions from the research model, identifying 1,000 individuals with similar risk profiles and preventing only 10% of expected cardiovascular events could reduce hospitalization costs by approximately **${int(1000 * (event_rate/100) * 0.10 * 21560):,}**.")
 
 # ─────────────────────────────────────────────
 # DISCLAIMER
