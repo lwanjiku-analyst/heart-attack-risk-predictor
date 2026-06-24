@@ -255,10 +255,16 @@ with st.sidebar:
     st.markdown("### Business Impact")
     st.markdown("**$56.9M annual savings** per 2M-member insurer from improved prevention targeting and high-risk outreach prioritization.")
     st.markdown("---")
-    st.markdown("### Behavioral Theory Frameworks")
+    st.markdown("### Behavioral & Public Health Frameworks")
+    framework_labels = {
+        "SEM": "Chronic Conditions & Structural Factors",
+        "TPB": "Health Behaviors & Lifestyle Choices",
+        "HBM": "Preventive Care Engagement",
+        "ALT": "Chronic Stress & Functional Burden",
+    }
     for fw, color in FRAMEWORK_COLORS.items():
         if fw == "Baseline": continue
-        st.markdown(f"<span style='color:{color};font-weight:700;'>■</span> **{fw}** — {FRAMEWORK_NAMES[fw].split('—')[1].strip()}", unsafe_allow_html=True)
+        st.markdown(f"<span style='color:{color};font-size:1.3rem;'>●</span> **{fw}** — {framework_labels[fw]}", unsafe_allow_html=True)
     st.markdown("---")
     st.markdown("<span class='small-note'>First study in BRFSS cardiovascular ML literature to apply 4 behavioral theory frameworks simultaneously. University of Central Oklahoma, 2026.</span>", unsafe_allow_html=True)
 
