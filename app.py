@@ -237,6 +237,9 @@ def equity_check(race, risk, decile):
 with st.sidebar:
     st.markdown("### Model Snapshot")
 
+    st.markdown("**Purpose**")
+    st.markdown("Identify individuals who may benefit from earlier preventive healthcare interventions before a heart attack occurs.")
+
     st.markdown("**Data Source**")
     st.markdown("CDC BRFSS 2022 (444,975 U.S. adults)")
 
@@ -248,9 +251,6 @@ with st.sidebar:
 
     st.markdown("**How Effective Is It?**")
     st.markdown("<span style='font-size:0.8rem;'>✅</span> Highest-risk individuals experience heart attack rates **4.4× higher** than the national average", unsafe_allow_html=True)
-
-    st.markdown("**Purpose**")
-    st.markdown("Identify individuals who may benefit from earlier preventive healthcare interventions before a heart attack occurs.")
     st.markdown("---")
     st.markdown("### Business Impact")
     st.markdown("**$56.9M annual savings** per 2M-member insurer from improved prevention targeting and high-risk outreach prioritization.")
