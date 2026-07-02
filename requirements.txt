@@ -1,9 +1,25 @@
-pandas
-numpy
-scikit-learn
-matplotlib
-seaborn
-shap
-streamlit
-jupyter
-imbalanced-learn
+# Core Data Science
+numpy>=1.26
+pandas>=2.2
+scikit-learn>=1.4
+
+# Visualization
+matplotlib>=3.8
+seaborn>=0.13
+
+# Explainable AI
+shap>=0.45
+
+# Web Application
+streamlit>=1.32
+
+# Utilities
+scipy>=1.12
+joblib>=1.4
+
+# Notebook Development
+jupyter>=1.0
+ipykernel>=6.29
+
+# Class Imbalance
+imbalanced-learn>=0.12
