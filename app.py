@@ -238,25 +238,17 @@ with st.sidebar:
     st.markdown("### Model Snapshot")
 
     st.markdown("**Purpose**")
-    st.markdown("Identify individuals who may benefit from earlier preventive healthcare interventions before a heart attack occurs.")
+    st.markdown("Explore survey characteristics associated with previously reported heart attack status.")
 
     st.markdown("**Data Source**")
     st.markdown("CDC BRFSS 2022 (444,975 U.S. adults)")
 
-    st.markdown("**How Accurate Is It?**")
-    st.markdown("<span style='font-size:0.8rem;'>✅</span> Correctly identifies heart attack risk patterns in approximately **84% of cases**", unsafe_allow_html=True)
+    st.markdown("**Model**")
+    st.markdown("Theory-guided Logistic Regression")
 
-    st.markdown("**How Well Does It Find High-Risk Individuals?**")
-    st.markdown("<span style='font-size:0.8rem;'>✅</span> Identifies approximately **82 out of every 100 high-risk individuals**", unsafe_allow_html=True)
-
-    st.markdown("**How Effective Is It?**")
-    st.markdown("<span style='font-size:0.8rem;'>✅</span> Highest-risk individuals experience heart attack rates **4.4× higher** than the national average", unsafe_allow_html=True)
     st.markdown("---")
     st.markdown("### 🌎 Why This Matters")
-    st.markdown("<span style='font-size:0.8rem;'>✅</span> Identifies individuals who may benefit from earlier preventive care", unsafe_allow_html=True)
-    st.markdown("<span style='font-size:0.8rem;'>✅</span> Helps focus healthcare resources on those most at risk", unsafe_allow_html=True)
-    st.markdown("<span style='font-size:0.8rem;'>✅</span> Supports data-driven population health management", unsafe_allow_html=True)
-    st.markdown("<span style='font-size:0.8rem;'>✅</span> May reduce avoidable heart attacks and related healthcare costs", unsafe_allow_html=True)
+    st.markdown("Helps researchers explore population patterns and compare groups within the study data.")
     st.markdown("---")
     st.markdown("### Behavioral & Public Health Frameworks")
     framework_labels = {
@@ -269,7 +261,7 @@ with st.sidebar:
         if fw == "Baseline": continue
         st.markdown(f"<span style='color:{color};font-size:1.3rem;'>●</span> **{fw}** — {framework_labels[fw]}", unsafe_allow_html=True)
     st.markdown("---")
-    st.markdown("<span class='small-note'>First study in BRFSS cardiovascular ML literature to apply 4 behavioral theory frameworks simultaneously. University of Central Oklahoma, 2026.</span>", unsafe_allow_html=True)
+    st.caption("Research and education only. This model does not predict future heart attacks or provide medical advice.")
 
 
 # ─────────────────────────────────────────────
