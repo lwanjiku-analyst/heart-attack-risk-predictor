@@ -1,4 +1,4 @@
-# ❤️ Theory-Driven Heart Attack Risk Predictor
+# ❤️ Theory-Driven Heart Attack Classification
 
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)
 ![SAS Viya](https://img.shields.io/badge/SAS-Viya-005CAB)
@@ -9,101 +9,62 @@
 
 ## Overview
 
-The **Theory-Driven Heart Attack Risk Predictor** is a machine learning application developed using the **CDC Behavioral Risk Factor Surveillance System (BRFSS) 2022** dataset containing **444,975 U.S. adults**.
+This project uses the **CDC Behavioral Risk Factor Surveillance System (BRFSS) 2022** dataset of **444,975 U.S. adults** to study characteristics associated with **previously reported heart attack status**.
 
-Unlike traditional cardiovascular prediction models that rely primarily on clinical risk factors, this project integrates **behavioral science and public health theory** into feature selection. Variables were organized according to four established theoretical frameworks before training the predictive model.
-
-The champion model was developed and validated in **SAS Viya Model Studio** and deployed as an interactive **Streamlit** web application for preventive cardiovascular risk assessment.
+Predictors were organized using behavioral and public health theory. The champion model was developed and validated in **SAS Viya Model Studio**, and the findings are presented in an interactive **Streamlit** application.
 
 ---
 
-# Behavioral Frameworks
-
-This study is the first known BRFSS 2022 cardiovascular machine learning project to simultaneously incorporate variables representing:
+## Behavioral Frameworks
 
 - 🟢 Health Belief Model (HBM)
 - 🔵 Theory of Planned Behavior (TPB)
 - 🔴 Social Ecological Model (SEM)
 - 🟣 Allostatic Load Theory (ALT)
 
-These frameworks improve model interpretability by organizing predictors according to behavioral and public health theory rather than relying solely on statistical feature selection.
+These frameworks help organize and explain the survey characteristics used by the model.
 
 ---
 
-# Dataset
+## Dataset
 
-**Source**
-
-CDC Behavioral Risk Factor Surveillance System (BRFSS) 2022
-
-**Sample Size**
-
-444,975 U.S. adults
-
-**Target Variable**
-
-HadHeartAttack (Binary Classification)
+- **Source:** CDC BRFSS 2022
+- **Modeling sample:** 444,975 U.S. adults
+- **Target:** `HadHeartAttack` — previously reported heart attack status
 
 ---
 
-# Champion Model
+## Champion Model
 
-| Metric | Validation |
-|---------|-----------:|
-| Algorithm | Logistic Regression |
-| Validation AUC | **0.8381** |
-| Recall | **81.51%** |
-| Operating Threshold | **0.05 (KS Optimized)** |
-| Framework | HBM + TPB + SEM + ALT |
+The champion model is a **Logistic Regression** model combining variables from all four frameworks.
 
-The model was trained and validated using **SAS Viya Model Studio**.
+| Validation AUC | Recall |
+| ---: | ---: |
+| **0.8391** | **81.53%** |
+
+The model was evaluated using a stratified training–validation split.
 
 ---
 
-# Business Impact
+## Population Findings
 
-By targeting the highest-risk **30%** of insured members, the model identifies approximately **79.95%** of heart attack cases.
+The highest-scoring **30%** of respondents included **79.95%** of those who reported a prior heart attack in the study dataset.
 
-For a hypothetical **2-million-member health insurer**, this targeted preventive strategy could substantially improve outreach efficiency while reducing unnecessary interventions.
-
-Based on the 2025 AHRQ average inpatient hospitalization cost of **$21,560**, this approach represents an estimated **$56 million** in avoidable healthcare expenditures through earlier identification of high-risk individuals.
+The observed prior-heart-attack rate was **24.99%** in the highest score decile and **0.20%** in the lowest. These figures describe patterns in the dataset, not future heart attack probabilities.
 
 ---
 
-# Risk Stratification
-
-The model demonstrates excellent population-level risk stratification.
-
-| Decile | Observed Heart Attack Rate |
-|-------:|---------------------------:|
-| 1 | **24.99%** |
-| 2 | 13.45% |
-| 3 | 8.31% |
-| 4 | 5.37% |
-| 5 | 3.52% |
-| 6 | 2.39% |
-| 7 | 1.62% |
-| 8 | 0.98% |
-| 9 | 0.45% |
-| 10 | **0.20%** |
-
-This represents approximately a **125-fold difference** between the highest- and lowest-risk populations.
-
----
-
-# Application Features
+## Application Features
 
 - Interactive Streamlit interface
-- Individualized heart attack risk prediction
-- Risk decile assignment
-- Framework-based risk explanation
+- Survey-based classification score and score decile
 - Population benchmark comparison
-- Preventive healthcare recommendations
-- Explainable AI interpretation
+- Behavioral framework explanations
+- Visualizations of population patterns
 
 ---
 
-# Technology Stack
+## Technology Stack
 
 - SAS Viya Model Studio
 - Python
@@ -114,58 +75,44 @@ This represents approximately a **125-fold difference** between the highest- and
 
 ---
 
-# Repository Structure
+## Repository Structure
 
-```
+```text
 heart-attack-risk-predictor/
-
-│── app.py
-│── requirements.txt
-│── AGENTS.md
-│── README.md
-│
+├── app.py
+├── requirements.txt
+├── AGENTS.md
+├── README.md
 ├── src/
-│ ├── preprocess.py
-│ ├── model.py
-│ └── init.py
-│
+│   ├── preprocess.py
+│   ├── model.py
+│   └── init.py
 ├── data/
-│ └── README.md
-│
+│   └── README.md
 └── images/
 ```
 
 ---
 
-# Research Contributions
+## Research Contributions
 
-This project contributes to cardiovascular risk prediction by:
-
-- Integrating behavioral science with machine learning
-- Developing a theory-driven feature selection framework
-- Deploying a validated SAS Viya champion model
-- Supporting explainable preventive healthcare
-- Demonstrating practical population health decision support
+- Integrates behavioral science with machine learning
+- Organizes predictors using four theoretical frameworks
+- Makes population-level findings accessible through an interactive app
 
 ---
 
-# Medical Disclaimer
+## Medical Disclaimer
 
-This application is intended for **research and educational purposes only**.
-
-Predictions are generated from population-level survey data and should **not** replace professional medical evaluation, diagnosis, or treatment decisions.
+This application is for **research and educational purposes only**. It examines **past, self-reported heart attack status**. It does **not** predict future heart attacks or replace professional medical evaluation.
 
 ---
 
-# Author
+## Author
 
-**Lilian Njeri Wanjiku**
-
-Master of Science in Business Analytics
-
-University of Central Oklahoma
-
-2026
+**Lilian Njeri Wanjiku**  
+Master of Science in Business Analytics  
+University of Central Oklahoma · 2026
 
 ---
 
