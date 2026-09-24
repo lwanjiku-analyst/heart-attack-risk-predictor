@@ -6,7 +6,7 @@ import streamlit as st
 # Page config + styling
 # ─────────────────────────────────────────────
 st.set_page_config(
-    page_title="Heart Attack Risk Predictor",
+    page_title="Theory-Driven Heart Attack Classification",
     page_icon="❤️",
     layout="wide",
 )
@@ -267,8 +267,8 @@ with st.sidebar:
 # ─────────────────────────────────────────────
 # Title
 # ─────────────────────────────────────────────
-st.title("❤️ Heart Attack Risk Predictor")
-st.caption("Powered by CDC BRFSS 2022 · 444,975 U.S. Adults · Logistic Regression Champion Model · AUC 0.84 · Lift@D1 4.43×")
+st.title("❤️ Theory-Driven Heart Attack Classification")
+st.caption("CDC BRFSS 2022 · 444,975 U.S. adults · Exploring previously reported heart attack status")
 st.markdown("---")
 
 col1, col2 = st.columns([1.05, 1], gap="large")
